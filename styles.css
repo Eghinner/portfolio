@@ -13,9 +13,29 @@ body {
 	background: linear-gradient(to right bottom, #144c7f, #114477, #0e3b6f, #0b3366, #092b5e, #1b2351, #211c45, #231639, #231028, #1e0b1a, #15050d, #000000);
 }
 
+@media (max-width: 900px) {
+	ul {
+		margin-top: 0;
+		position: fixed;
+		/*display: none !important;*/
+		top: 0;
+		left: 0;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100vh;
+		width: 100vw;
+		background: rgba(0,0,0,0.5);
+	}
+	nav .fas {
+		visibility: visible !important;
+		right:19px;
+		top: 20px;
+	}
+}
+
 nav {
 	width: 90%;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid #fff;
@@ -26,10 +46,19 @@ h1 {
 	letter-spacing: 3px;
 }
 
+nav .fas {
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	z-index: 999999;
+}
+
 ul {
 	list-style: none;
 	display: flex;
 	align-items: center;
+	/*flex-direction: column;*/
 }
 
 li {
@@ -205,8 +234,8 @@ a {
 }
 
 .skills div:nth-child(1n) {
-		margin-bottom: 2rem;
-	}
+	margin-bottom: 2rem;
+}
 
 .framework {
 	grid-column-start: 1;
