@@ -1,7 +1,12 @@
 const bar = document.querySelector('ul')
 const burger = document.querySelector('.fa-bars')
 
-bar.style.display = 'none'
+if (window.matchMedia("(max-width: 900px)").matches) {
+  bar.style.display = 'none'
+} else {
+  bar.style.display = 'flex'
+}
+
 burger.addEventListener('click', () => show())
 
 function show() {
