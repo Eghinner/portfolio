@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Text:wght@400;500;600&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(to right bottom, #144c7f, #114477, #0e3b6f, #0b3366, #092b5e, #1b2351, #211c45, #231639, #231028, #1e0b1a, #15050d, #000000);
+}
+
+nav {
+	color: #fff;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #fff;
+}
+
+h1 {
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 3px;
+}
+
+ul {
+	font-family: 'Red Hat Text', sans-serif;
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+li {
+	margin: 0 .5rem;
+	font-weight: bold;
+}
+
+.banner {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+	height: 50vh;
+}
+
+.performance {
+	font-family: 'Red Hat Text', sans-serif;
+	color: #fff;
+	font-size: 3rem;
+	font-weight: bold;
+	flex: 1;
+	margin: 0 20px;
+}
+
+.face {
+	flex: 1;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.molde {
+	animation: oval-shift 10s cubic-bezier(.17,.67,.83,.67) infinite alternate;
+	height: 260px;
+	width: 260px;
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	border-radius: 61% 39% 70% 30% / 49% 60% 40% 51% ;
+}
+.photo {
+	height: 240px;
+	width: 240px;
+	background-image: linear-gradient(to right top, #c2a645, #cb9429, #d67e10, #e16404, #eb3f12);
+	border-radius: 85% 15% 83% 17% / 54% 44% 56% 46% ;
+	animation: oval-shift 10s linear infinite alternate;
+}
+.me {
+	height: 100%;
+	width: 100%;
+	animation: oval-shift 10s linear infinite alternate;
+	background: url(image.png);
+	object-fit: cover;
+
+}
+
+@keyframes oval-shift {
+	0% {
+		border-radius: 61% 39% 70% 30% / 49% 60% 40% 51%;
+	}
+	25% {
+		border-radius: 45% 55% 9% 91% / 66% 60% 40% 34% ;
+	}
+	50% {
+		border-radius: 17% 83% 60% 40% / 84% 35% 65% 16%  ;
+	}
+	75% {
+		border-radius: 85% 15% 83% 17% / 52% 44% 56% 48%  ;
+	}
+}
+
+.projects_section {
+	border-bottom: 1px solid #fff;
+}
+
+header {
+	margin-top: 2rem;
+	text-align: center;
+	font-family: 'Bebas Neue', cursive;
+	color: #fff;
+	font-size: 3rem;
+}
+
+.projects {
+	display: flex;
+	margin: 0 20px;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+}
+
+.project img {
+	height: 300px;
+	border-radius: 5px;
+	transition: opacity .5s ease;
+}
+
+.project img:hover {
+	opacity: .9;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+}
+
+a {
+	padding: .5rem 1rem;
+	border-radius: 20px;
+	background-color: lightgreen;
+	font-family: 'Red Hat Text', sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
