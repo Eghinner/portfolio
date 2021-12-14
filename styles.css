@@ -49,9 +49,12 @@ li {
 	font-family: 'Red Hat Text', sans-serif;
 	color: #fff;
 	font-size: 3rem;
-	font-weight: bold;
+	font-weight: 900;
 	flex: 1;
 	margin: 0 20px;
+	background: linear-gradient(to right, #00C6C0, #FFF7D6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .face {
