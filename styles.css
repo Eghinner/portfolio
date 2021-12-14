@@ -5,14 +5,15 @@
 }
 
 body {
+	font-family: 'Red Hat Text', sans-serif;
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
+	color: #fff;
 	background: linear-gradient(to right bottom, #144c7f, #114477, #0e3b6f, #0b3366, #092b5e, #1b2351, #211c45, #231639, #231028, #1e0b1a, #15050d, #000000);
 }
 
 nav {
-	color: #fff;
 	width: 90%;
 	margin: auto;
 	display: flex;
@@ -26,7 +27,6 @@ h1 {
 }
 
 ul {
-	font-family: 'Red Hat Text', sans-serif;
 	list-style: none;
 	display: flex;
 	align-items: center;
@@ -37,21 +37,30 @@ li {
 	font-weight: bold;
 }
 
+@media (max-width: 900px) {
+	.banner {
+		flex-direction: column;
+		min-height: 700px;
+		padding: 2rem 0;
+	}
+	.performance {
+		text-align: center;
+	}
+
+}
+
 .banner {
-	width: 100%;
 	display: flex;
+	height: 500px;
 	align-items: center;
 	border-bottom: 1px solid #fff;
-	height: 50vh;
 }
 
 .performance {
-	font-family: 'Red Hat Text', sans-serif;
-	color: #fff;
-	font-size: 3rem;
-	font-weight: 900;
 	flex: 1;
-	margin: 0 20px;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 1rem;
 	background: linear-gradient(to right, #00C6C0, #FFF7D6);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -59,30 +68,33 @@ li {
 
 .face {
 	flex: 1;
-	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
 }
 
 .molde {
-	animation: oval-shift 10s cubic-bezier(.17,.67,.83,.67) infinite alternate;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 260px;
 	width: 260px;
-	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 	border-radius: 61% 39% 70% 30% / 49% 60% 40% 51% ;
+	animation: oval-shift 20s cubic-bezier(.17,.67,.83,.67) infinite alternate-reverse;
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 .photo {
-	height: 240px;
-	width: 240px;
-	background-image: linear-gradient(to right top, #c2a645, #cb9429, #d67e10, #e16404, #eb3f12);
+	height: 259px;
+	width: 259px;
 	border-radius: 85% 15% 83% 17% / 54% 44% 56% 46% ;
-	animation: oval-shift 10s linear infinite alternate;
+	animation: oval-shift 20s ease-in-out infinite alternate;
+	background-image: linear-gradient(to right top, #c2a645, #cb9429, #d67e10, #e16404, #eb3f12);
 }
 .me {
 	height: 100%;
 	width: 100%;
-	animation: oval-shift 10s linear infinite alternate;
+	border-radius: 85% 15% 83% 17% / 54% 44% 56% 46% ;
+	animation: oval-shift 20s cubic-bezier(.17,.67,.83,.67) infinite alternate;
 	background: url(image.png);
 	object-fit: cover;
 
@@ -102,17 +114,30 @@ li {
 		border-radius: 85% 15% 83% 17% / 52% 44% 56% 48%  ;
 	}
 }
-
+@media (max-width: 900px) {
+	.project img {
+		width: 100%;
+		object-fit: contain;
+		height: auto;
+	}
+}
 .projects_section {
 	border-bottom: 1px solid #fff;
+	padding: 2rem 0;
 }
 
 header {
 	margin-top: 2rem;
 	text-align: center;
 	font-family: 'Bebas Neue', cursive;
-	color: #fff;
 	font-size: 3rem;
+}
+
+.title {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	word-spacing: 5px;
 }
 
 .projects {
@@ -146,8 +171,112 @@ header {
 a {
 	padding: .5rem 1rem;
 	border-radius: 20px;
-	background-color: lightgreen;
-	font-family: 'Red Hat Text', sans-serif;
-	color: #fff;
+	background-color: #F1F1E6;
+	color: #000;
+	font-weight: bold;
 	text-decoration: none;
+}
+
+@media (max-width: 900px) {
+	.skills_section {
+		/*height: 700px;*/
+	}
+	.skills {
+		display: block !important;
+		text-align: center;
+		margin: 1rem 0;
+	}
+	.skills div:nth-child(1n) {
+		/*margin-bottom: 2rem !important;*/
+	}
+}
+
+.skills_section {
+	border-bottom: 1px solid #fff;
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	align-items: center;
+	justify-items: center;
+	/*height: 400px;*/
+}
+
+.skills div:nth-child(1n) {
+		margin-bottom: 2rem;
+	}
+
+.framework {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.skills .fab {
+	margin: 0 2rem;
+	font-size: 5rem;
+}
+.fa-html5 {
+	color: #9F4907;
+}
+.fa-css3-alt {
+	color: #07299F;
+}
+.fa-js-square {
+	color: #C0C034;
+}
+.fa-react {
+	color: #34C0AD;
+}
+.fa-php {
+	color: #724387;
+}
+.fa-laravel {
+	color: #741720;
+}
+.fa-node {
+	color: #177423;
+}
+
+.contact {
+	/*width: 50%;*/
+}
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width:420px; margin:50px auto;
+}
+
+textarea {
+	height: 150px;
+	line-height: 150%;
+	/*resize: vertical;*/
+}
+
+.feedback-input {
+	color: #fff;
+	font-weight:500;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border:2px solid #F1F1E6;
+	padding: 13px;
+	margin-bottom: 15px;
+	width:100%;
+	outline:0;
+}
+
+[type="submit"] {
+	padding: 13px;
+	margin-bottom: 15px;
+	width:100%;
+	outline:0;
+	font-weight:500;
+	border-radius: 5px;
+	line-height: 22px;
+	color: #000;
+	background-color: #F1F1E6;
 }
