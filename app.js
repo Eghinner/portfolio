@@ -30,10 +30,10 @@ var mql = window.matchMedia("(max-width: 900px)")
 function screenTest(e) {
 	if (e.matches) {
 		burger.classList.replace('hidden', 'show')
-		bar.classList.add('bar')
+		// bar.classList.add('bar')
 	} else {
 		burger.classList.replace('show', 'hidden')
-		bar.classList.remove('bar')
+		// bar.classList.remove('bar')
 	}
 }
 mql.addListener(screenTest);
