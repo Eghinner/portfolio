@@ -1,5 +1,6 @@
 const bar = document.querySelector('ul')
-const burger = document.querySelector('.fa-bars')
+const burger = document.querySelector('nav .fa-bars')
+const times = document.querySelector('nav .fa-times')
 
 const
 go_projects = document.querySelector('#go_projects'),
@@ -14,30 +15,42 @@ contact = document.querySelector('#contact')
 go_projects.addEventListener('click', ()=> {
 	// show()
 	projects.scrollIntoView({behavior: "smooth"})
-	})
+})
 go_skills.addEventListener('click', ()=> {
 	// show()
 	skills.scrollIntoView({behavior: "smooth"})
-	})
+})
 go_contact.addEventListener('click', ()=> {
 	// show()
 	contact.scrollIntoView({behavior: "smooth"})
-	})
+})
 
+var mql = window.matchMedia("(max-width: 900px)")
 
-// if (window.matchMedia("(max-width: 900px)").matches) {
-// 	bar.style.display = 'none'
-// } else {
-// 	bar.style.display = 'flex'
-// }
+function screenTest(e) {
+	if (e.matches) {
+		burger.classList.replace('hidden', 'show')
+		bar.classList.toggle('bar')
+	} else {
+		burger.classList.replace('show', 'hidden')
+		bar.classList.toggle('bar')
+	}
+}
+mql.addListener(screenTest);
 
 burger.addEventListener('click', () => show())
 
 function show() {
-	if (bar.style.display === 'none') {
-		bar.style.display = 'flex'
+	if (bar.style.right === '-200px') {
+		bar.style.right = '0'
+		// burger.style.visibility = 'hidden'
+		// times.style.visibility = 'visible !important'
+		// burger.classList.replace('fa-bars', 'fa-times')
 	} else {
-		bar.style.display = 'none'
+		bar.style.right = '-200px'
+		// burger.style.visibility = 'visible'
+		// times.style.visibility = 'hidden'
+		// burger.classList.replace('fa-times', 'fa-bars')
 	}
 }
 
@@ -57,38 +70,38 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+	showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+	showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  var slides = document.getElementsByClassName("project");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+	var slides = document.getElementsByClassName("project");
+	if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
 
-  slides[slideIndex-1].style.display = "block";
-}
+			slides[slideIndex-1].style.display = "block";
+		}
 
-const form = document.querySelector('form')
+		const form = document.querySelector('form')
 
-form.addEventListener('submit', e => {
-	e.preventDefault()
-	Email.send({
-		SecureToken: '0d716887-66d6-49aa-904d-529b39112247',
-	    To : "eghinner@gmail.com",
-	    From : 'eghinner@gmail.com',
-	    Subject : "This is the subject",
-	    Body : "And this is the body"
-	}).then(
-	  message => alert(message)
-	);
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			Email.send({
+				SecureToken: '0d716887-66d6-49aa-904d-529b39112247',
+				To : "eghinner@gmail.com",
+				From : 'eghinner@gmail.com',
+				Subject : "This is the subject",
+				Body : "And this is the body"
+			}).then(
+			message => alert(message)
+			);
 	// reset()
-	return false
-})
+			return false
+		})
