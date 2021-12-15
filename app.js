@@ -12,33 +12,83 @@ skills = document.querySelector('#skills'),
 contact = document.querySelector('#contact')
 
 go_projects.addEventListener('click', ()=> {
-	show()
+	// show()
 	projects.scrollIntoView({behavior: "smooth"})
 	})
 go_skills.addEventListener('click', ()=> {
-	show()
+	// show()
 	skills.scrollIntoView({behavior: "smooth"})
 	})
 go_contact.addEventListener('click', ()=> {
-	show()
+	// show()
 	contact.scrollIntoView({behavior: "smooth"})
 	})
 
 
-if (window.matchMedia("(max-width: 900px)").matches) {
-	bar.style.display = 'none'
-} else {
-	bar.style.display = 'flex'
-}
+// if (window.matchMedia("(max-width: 900px)").matches) {
+// 	bar.style.display = 'none'
+// } else {
+// 	bar.style.display = 'flex'
+// }
 
 burger.addEventListener('click', () => show())
 
 function show() {
 	if (bar.style.display === 'none') {
 		bar.style.display = 'flex'
-		// burger.style.position = 'fixed'
 	} else {
 		bar.style.display = 'none'
-		// burger.style.position = 'static'
 	}
 }
+
+
+let slideIndex = 1;
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+next.addEventListener('click', e => {
+	e.preventDefault()
+	plusSlides(1)
+})
+prev.addEventListener('click', e => {
+	e.preventDefault()
+	plusSlides(-1)
+})
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var slides = document.getElementsByClassName("project");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block";
+}
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', e => {
+	e.preventDefault()
+	Email.send({
+		SecureToken: '0d716887-66d6-49aa-904d-529b39112247',
+	    To : "eghinner@gmail.com",
+	    From : 'eghinner@gmail.com',
+	    Subject : "This is the subject",
+	    Body : "And this is the body"
+	}).then(
+	  message => alert(message)
+	);
+	// reset()
+	return false
+})
