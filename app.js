@@ -30,10 +30,10 @@ var mql = window.matchMedia("(max-width: 900px)")
 function screenTest(e) {
 	if (e.matches) {
 		burger.classList.replace('hidden', 'show')
-		bar.classList.toggle('bar')
+		bar.classList.add('bar')
 	} else {
 		burger.classList.replace('show', 'hidden')
-		bar.classList.toggle('bar')
+		bar.classList.remove('bar')
 	}
 }
 mql.addListener(screenTest);
@@ -41,17 +41,7 @@ mql.addListener(screenTest);
 burger.addEventListener('click', () => show())
 
 function show() {
-	if (bar.style.right === '-200px') {
-		bar.style.right = '0'
-		// burger.style.visibility = 'hidden'
-		// times.style.visibility = 'visible !important'
-		// burger.classList.replace('fa-bars', 'fa-times')
-	} else {
-		bar.style.right = '-200px'
-		// burger.style.visibility = 'visible'
-		// times.style.visibility = 'hidden'
-		// burger.classList.replace('fa-times', 'fa-bars')
-	}
+	bar.classList.toggle('des')
 }
 
 
