@@ -69,29 +69,45 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-	var slides = document.getElementsByClassName("project");
+	let slides = document.getElementsByClassName("project");
 	if (n > slides.length) {slideIndex = 1}
 		if (n < 1) {slideIndex = slides.length}
-			for (let i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
+			for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+	slides[slideIndex-1].style.display = "block";
+}
 
-			slides[slideIndex-1].style.display = "block";
-		}
+const
+	form = document.querySelector('form'),
+	name = document.querySelector('#name'),
+	email = document.querySelector('#email'),
+	descript = document.querySelector('#descript')
 
-		const form = document.querySelector('form')
+form.addEventListener('submit', e => {
+	e.preventDefault()
 
-		form.addEventListener('submit', e => {
-			e.preventDefault()
-			Email.send({
-				SecureToken: '0d716887-66d6-49aa-904d-529b39112247',
-				To : "eghinner@gmail.com",
-				From : 'eghinner@gmail.com',
-				Subject : "This is the subject",
-				Body : "And this is the body"
-			}).then(
-			message => alert(message)
-			);
-	// reset()
-			return false
-		})
+	Email.send({
+		SecureToken: 'd806dc07-bc8f-44ff-b6a0-421b4d8a6981',
+		From : 'eghinner@gmail.com',
+		To : 'ensohernandez63@gmail.com',
+		Subject : 'Alerta que camina!',
+		Body : `
+			<h1>Hey, bro!</h1>
+			<h3>This is the content</h3>
+			<ul>
+			<li>Contact's Name: <span style="color=red">${name.value}</span></li>
+			<li>Contact's Email: <span style="color=red">${email.value}</span></li>
+			<li>Contact's Desc: <span style="color=red">${descript.value}</span></li>
+			</ul>
+			`
+		}).then(
+		// message =>
+		Swal.fire(
+			'Thanks!',
+			'Your message has been sent',
+			'success'
+			)
+		)
+		name.value = ''
+		email.value = ''
+		descript.value = ''
+})
