@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<script defer src="https://smtpjs.com/v3/smtp.js"></script>
 	<script defer type="text/javascript" src='app.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Eghinner's Portfolio</title>
 	<link rel="stylesheet" href="./styles.css">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
 </head>
 <body>
 	<nav>
@@ -25,15 +25,14 @@
 	</nav>
 	<div class="banner">
 		<div class="performance">
-			Hello, my name is Eghinner Hernandez and i'm Junior Web Developer
+			<div>Hello,</div>
+			<div>my name is Eghinner Hernandez</div>
+			<div>and i'm Junior Web Developer</div>
 		</div>
 		<div class="face">
-			<!-- <div class="molde"> -->
-				<div class="photo">
-					<img src="src/hood.png" alt="hood">
-					<!-- <div class="me"></div> -->
-				</div>
-			<!-- </div> -->
+			<div class="photo">
+				<img src="src/hood.png" alt="hood">
+			</div>
 		</div>
 	</div>
 	<section id="projects" class="projects_section">
@@ -118,8 +117,7 @@
 			<form>
 				<input type="text" class="feedback-input" placeholder="Name">
 				<input type="text" class="feedback-input" placeholder="Email">
-				<textarea class="feedback-input">
-				</textarea>
+				<textarea class="feedback-input" placeholder="Message"></textarea>
 				<input type="submit" value="SEND">
 			</form>
 		</div>
