@@ -3,15 +3,21 @@ const burger = document.querySelector('nav .fa-bars')
 const times = document.querySelector('nav .fa-times')
 
 const
+about_me = document.querySelector('#about_me'),
 go_projects = document.querySelector('#go_projects'),
 go_skills = document.querySelector('#go_skills'),
 go_contact = document.querySelector('#go_contact')
 
 const
+about = document.querySelector('#about'),
 projects = document.querySelector('#projects'),
 skills = document.querySelector('#skills'),
 contact = document.querySelector('#contact')
 
+about.addEventListener('click', ()=> {
+	// show()
+	about_me.scrollIntoView({behavior: "smooth"})
+})
 go_projects.addEventListener('click', ()=> {
 	// show()
 	projects.scrollIntoView({behavior: "smooth"})
