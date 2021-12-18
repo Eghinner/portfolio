@@ -82,6 +82,10 @@ function showSlides(n) {
 	slides[slideIndex-1].style.display = "block";
 }
 
+function IsEmail(email) {
+	return /^[a-z0-9]+\.?\w*@[a-z]+(\.\w{2,3})?\.\w{2,4}$/.test(email);
+}
+
 const
 	form = document.querySelector('form'),
 	name = document.querySelector('#name'),
@@ -90,6 +94,9 @@ const
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
+	if (name.value.trim()==='') return
+	if (email.value.trim()==='' || !IsEmail(email.value)) return
+	if (descript.value.trim()==='') return
 
 	Email.send({
 		SecureToken: 'd806dc07-bc8f-44ff-b6a0-421b4d8a6981',
