@@ -165,7 +165,7 @@ li:hover::after {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	height: 350px;
+	/*height: 350px;*/
 	font-family: 'Bakbak One', cursive;
 	animation: ttt 7.5s ease infinite alternate;
 	flex-basis: 40%;
@@ -192,6 +192,11 @@ li:hover::after {
 	font-weight: 500;
 }
 
+@media (max-width: 900px) {
+	.networks {
+		max-width: 300px;
+	}
+}
 .networks {
 	background-color: grey;
 	padding: 1rem;
