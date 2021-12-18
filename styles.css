@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Text:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
-
+.light_theme {
+  --color-primary: #1B2351;
+  --background: linear-gradient(to right bottom, #f5ecf1, #ebe7ed, #e2e3e8, #dadee1, #d5d8d9, #d0d3d3, #cacdce, #c5c8c8, #bec2c2, #b7bbbb, #b0b5b5, #a9afaf);
+  --color-secondary: #FDFEFE;
+  --perform: linear-gradient(to right, #e85773, #c15a9c, #8365ad, #3e69a3, #006585, #005f7a, #00586f, #005265, #004d71, #00467c, #003d82, #292e81);
+  --color-accent: #fd6f53;
+  --font-color: hsl(236, 9%, 61%);
+  --shadow: #C3C6C8;
+  --day: block;
+  --night: none;
+}
+.dark_theme {
+  --color-primary: #fff;
+  --background: linear-gradient(to right top, #e85773, #c15a9c, #8365ad, #3e69a3, #006585, #005f7a, #00586f, #005265, #004d71, #00467c, #003d82, #292e81);
+  --perform: linear-gradient(to right top, #d16ba5, #cd86c2, #c9a0d9, #c7b8e9, #cccef4, #c5d9fb, #c1e4ff, #c2edff, #a4f2ff, #7ff7ff, #52fbfe, #07ffef);;
+  --color-secondary: #34495E;
+  --color-accent: hsl(236, 33%, 92%);
+  --font-color: hsl(233, 11%, 84%);
+  --shadow: #111B24;
+  --day: none;
+  --night: block;
+}
 * {
 	box-sizing: border-box;
 }
@@ -10,8 +31,8 @@ body {
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
-	color: #1B2351;
-	background: linear-gradient(to right bottom, #f5ecf1, #ebe7ed, #e2e3e8, #dadee1, #d5d8d9, #d0d3d3, #cacdce, #c5c8c8, #bec2c2, #b7bbbb, #b0b5b5, #a9afaf);
+	color: var(--color-primary);
+	background: var(--background);
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +44,18 @@ body {
 	border-radius: 20%;
 }
 
+.fa-sun {
+	font-size: 2rem;
+	cursor: pointer;
+	align-self: center;
+}
+
 @media (max-width: 900px) {
+	.fa-sun {
+		/*position: relative;*/
+		/*right: 30%;*/
+		/*margin: 0 3rem;*/
+	}
 	.bar {
 		margin-top: 0;
 		position: fixed;
@@ -68,7 +100,7 @@ h1 {
 	letter-spacing: 3px;
 }
 
-nav .fas {
+nav .fa-bars {
 	position: absolute;
 	visibility: hidden;
 	display: flex;
@@ -141,7 +173,8 @@ li:hover::after {
 	font-weight: bold;
 	background-size: 1000% 1000% !important;
 	/*background-image: linear-gradient(to right top, #e85773, #c15a9c, #8365ad, #3e69a3, #006585, #005f7a, #00586f, #005265, #004d71, #00467c, #003d82, #292e81);*/
-	background: linear-gradient(to right, #e85773, #c15a9c, #8365ad, #3e69a3, #006585, #005f7a, #00586f, #005265, #004d71, #00467c, #003d82, #292e81);
+	background: var(--perform);
+	/*linear-gradient(to right, #e85773, #c15a9c, #8365ad, #3e69a3, #006585, #005f7a, #00586f, #005265, #004d71, #00467c, #003d82, #292e81);*/
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -170,11 +203,17 @@ li:hover::after {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.networks i {
+.networks a {
+	/*height: 50px;*/
+	/*width: 80px;*/
 	font-size: 2rem;
-	margin: 0 1rem;
+	padding: .5rem;
+	border-radius: 3rem;
+	transition: background .5s ease;
 }
-
+.networks a:hover {
+	background-color: darkgrey;
+}
 .github {
 	color: #000;
 }
@@ -182,6 +221,7 @@ li:hover::after {
 .linkedin {
 	color: #07299F;
 }
+/*.facebook,*/
 
 .whatsapp {
 	color: green;
@@ -377,19 +417,19 @@ textarea {
 }
 
 .feedback-input {
-	color: #fff;
+	/*color: #fff;*/
 	font-weight:500;
 	border-radius: 5px;
 	line-height: 22px;
 	background-color: transparent;
-	border:2px solid #1B2351;
+	border:2px solid var(--color-primary);
 	padding: 13px;
 	margin-bottom: 15px;
 	width:100%;
 	outline:0;
 }
 .feedback-input::placeholder {
-	color: #1B2351;
+	color: var(--color-primary);
 	font-size: 1rem;
 }
 
@@ -402,7 +442,7 @@ textarea {
 	border-radius: 5px;
 	line-height: 22px;
 	color: #fff;
-	background-color: #1B2351;
+	background-color: var(--color-primary);
 	cursor: pointer;
 }
 [type="submit"]:focus, [type="submit"]:active {
