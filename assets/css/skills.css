@@ -1,0 +1,65 @@
+@media (max-width: 900px) {
+	.skills {
+		display: block !important;
+		text-align: center;
+		margin: 0 !important;
+	}
+
+	.skills div .title {
+		text-align: center;
+	}
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	justify-items: center;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	max-width: 90%;
+	margin: 5rem auto 0 auto;
+}
+.skills .skills_group{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.skills .framework {
+	grid-column: 1 / 3;
+}
+.skills .skill {
+	text-align: center;
+}
+
+.skills .skill span {
+	display: block;
+	font-weight: bold;
+}
+.skills .fab {
+	margin: 0 1rem;
+	font-size: 5rem;
+
+}
+.fa-html5 {
+	color: #9F4907;
+}
+.fa-css3-alt {
+	color: #07299F;
+}
+.fa-js-square {
+	color: #C0C034;
+}
+.fa-react {
+	color: #34C0AD;
+}
+.fa-php {
+	color: #724387;
+}
+.fa-laravel {
+	color: #741720;
+}
+.fa-node {
+	color: #177423;
+}
