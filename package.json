@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@splidejs/splide": "^3.6.12",
+    "dotenv": "^16.0.0",
     "sweetalert2": "^11.4.0"
   },
   "devDependencies": {},
@@ -15,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/Eghinner/portfolio.git"
   },
-  "keywords": ["html", "css", "js"],
+  "keywords": [],
   "author": "Eghinner",
   "license": "ISC",
   "bugs": {

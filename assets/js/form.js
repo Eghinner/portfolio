@@ -1,4 +1,3 @@
-
 const
     form = document.querySelector('form'),
     input_name = document.querySelector('#name'),
@@ -24,7 +23,7 @@ function checkInputs() {
         return;
     } else {
         Email.send({
-            SecureToken: process.env.TOKEN,
+            SecureToken: config.MY_TOKEN,
             From: 'eghinner@gmail.com',
             To: 'ensohernandez63@gmail.com',
             Subject: 'Alerta que camina!',
