@@ -1,18 +1,19 @@
 const list_rutes = document.querySelectorAll('body section')
 const list = document.querySelectorAll('#bar li')
-	.forEach((elem, index) => {
-		elem.addEventListener('click', () => {
-			list_rutes[index].scrollIntoView({behavior: "smooth"})
-		})
-	})
+    .forEach((elem, index) => {
+        elem.addEventListener('click', () => {
+            list_rutes[index].scrollIntoView({ behavior: "smooth" })
+        })
+    })
 
 
 
 
 
-document.addEventListener( 'DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 	var splide = new Splide( '#main-slider', {
 	  pagination: false,
+	  arrows: false
 	} );
 
 	var thumbnails = document.getElementsByClassName( 'thumbnail' );
@@ -41,7 +42,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	  }
 	} );
 
+	new Splide( '#image-slider' ).mount();
 	splide.mount();
-} );
-
-
+});

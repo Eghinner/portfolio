@@ -2,245 +2,280 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-	<script defet src="assets/fontawesome-free-6.0.0-web/js/all.min.js"></script>
-	<title>Eghinner's Portfolio</title>
-	<link rel="stylesheet" href="./assets/css/styles.css">
-	<link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
-	<link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css">
-
-	<script type="text/javascript" src='assets/js/app.js' defer></script>
-	<script type="text/javascript" src="assets/js/burger.js" defer></script>
-	<script type="text/javascript" src="assets/js/form.js" defer></script>
-	<script src="./assets/js/smtp.js" defer></script>
-	<script type="text/javascript" src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js" defer></script>
-	<script src="node_modules/@splidejs/splide/dist/js/splide.min.js" defer></script>
-
-	<link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defet src="assets/fontawesome-free-6.0.0-web/js/all.min.js"></script>
+    <title>Eghinner's Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <script type="text/javascript" src='assets/js/app.js' defer></script>
+    <script type="text/javascript" src="assets/js/burger.js" defer></script>
+    <script type="text/javascript" src="assets/js/form.js" defer></script>
+    <script src="./assets/js/smtp.js" defer></script>
+    <script type="text/javascript" src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js" defer></script>
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
 </head>
 
 <body>
-	<nav>
-		<h1>Portfolio</h1>
-		<div class="menu-btn">
-		    <div class="menu-btn__burger"></div>
-		  </div>
-		<ul id="bar" class="bar">
-			<li id="about">About me</li>
-			<li id="go_projects">Projects</li>
-			<li id="go_skills">Skills</li>
-			<li id="go_contact">Contact</li>
-		</ul>
-	</nav>
-	<div class="banner">
-		<div class="performance">
-			<div>Hello,</div>
-			<div>my name is Eghinner Hernandez</div>
-			<div>and i'm Web Developer</div>
-		</div>
-		<div class="face">
-			<div class="photo">
-				<img src="src/s-hood.png" alt="hood">
-			</div>
-		</div>
-	</div>
-	<section id="about_me">
-		<header>About me</header>
-		<div class="me">
-			I like to take advantage of all
-			available online resources
-			with the aim of being a
-			developer capable of finding
-			sophisticated solutions to
-			complex and / or robust
-			problems.
-		</div>
-		<div class="networks">
-			<span>Social</span>
-			<a
-			class='linkedin'
-			href="https://www.linkedin.com/in/eghinner-david-hernandez-ramirez-722a8617b"
-			target="_blank">
-				<i class="fab fa-linkedin-in"></i>
-			</a>
-			<a
-			class="github"
-			href="https://github.com/Eghinner"
-			target="_blank">
-				<i class="fab fa-github"></i>
-			</a>
-			<a
-			class="whatsapp"
-			target="_blank"
-			href="https://wa.me/message/IJOA5AATR7X6C1"
-			>
-			<i class="fab fa-whatsapp"></i>
-			</a>
-			<a
-			class="facebook"
-			target="_blank"
-			href="https://www.facebook.com/eghinner.hernandez.9"
-			>
-			<i class="fab fa-facebook"></i>
-			</a>
-		</div>
-	</section>
-	<section id="projects">
-		<header>Projects</header>
-		<div
-		id="main-slider"
-		class="splide"
-		data-splide='{"type":"loop"}'>
-		  <div class="splide__track">
-		  	<ul class="splide__list">
-		  		<li class="splide__slide">
+    <nav>
+        <h1>Portfolio</h1>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        <ul id="bar" class="bar">
+            <li>About me</li>
+            <li>Projects</li>
+            <li>Skills</li>
+            <li>Certications</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <div class="performance">
+            <div>Hello,</div>
+            <div>my name is Eghinner Hernandez</div>
+            <div>and i'm Web Developer</div>
+        </div>
+        <div class="face">
+            <div class="photo">
+                <img src="src/s-hood.png" alt="hood">
+            </div>
+        </div>
+    </div>
+    <section id="about_me">
+        <header>About me</header>
+        <div class="me">
+            <p>
+            	I consider myself a self-taught, constantly learning, focused and eager to demonstrate my skills.
+            </p>
+            <p>
+            	As a passionate programmer I like to take advantage of the resources available online, always keep myself updated and maintain good development practices.
+            </p>
+            <p>
+            	I am looking for long term growth opportunities to further my professional growth.
+            </p>
+        </div>
+        <div class="networks">
+            <span>Social</span>
+            <a class='linkedin' href="https://www.linkedin.com/in/eghinner-david-hernandez-ramirez-722a8617b" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="github" href="https://github.com/Eghinner" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="whatsapp" target="_blank" href="https://wa.me/message/IJOA5AATR7X6C1">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="facebook" target="_blank" href="https://www.facebook.com/eghinner.hernandez.9">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </section>
+    <section id="projects">
+        <header>Projects</header>
+        <div id="main-slider" class="splide" data-splide='{"type":"loop"}'>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="project">
+                            <div class="proyect__group">
+                            	<div>
+                            		<p>In this CMS you can make use of the administrator account to manage the views shown to other users.</p>
+                            		<p>Add tasks and check their status with respect to users.</p>
+                            	</div>
+                                <div>
+                                    <img src="./src/checklister.png" alt="img" loading="lazy">
+                                    <div class="links">
+                                        <a href="https://checklister8743.herokuapp.com" target="_blank">
+                                            View Site <i class="fas fa-globe"></i>
+                                        </a>
+                                        <a href="https://github.com/Eghinner/Checklister" target="_blank">
+                                            View Repo <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="project">
+                            <div class="proyect__group">
+                            	<div>
+                            		<p>This is a trial online store in which you can see detailed information of each product, add your products to the cart, also filter and sort the products.</p>
+                            		<p>When you have products in the cart you can manage the quantity you want or if you prefer to remove it.</p>
+                            	</div>
+                            	<div>
+                                    <img src="src/Store.png" alt="img" loading="lazy">
+                                    <div class="links">
+                                        <a href="https://store-app4363.netlify.app" target="_blank">
+                                            View Site <i class="fas fa-globe"></i>
+                                        </a>
+                                        <a href="https://github.com/Eghinner/store-app" target="_blank">
+                                            View Repo <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="project">
+                            <div class="proyect__group">
+                            	<div>
+                            		<p>Log in and manage your pending projects.</p>
+                            		<p>You can add a new project or delete an existing one, as well as divide your projects into tasks.</p>
+                            		<p>Tasks can be edited or removed if desired.</p>
+                            	</div>
+                                <div>
+                                    <img src="./src/manager.png" alt="img" loading="lazy">
+                                    <div class="links">
+                                        <a href="https://manager-proyectos.netlify.app/" target="_blank">
+                                            View Site <i class="fas fa-globe"></i>
+                                        </a>
+                                        <a href="https://github.com/Eghinner/manejo-de-proyectos" target="_blank">
+                                            View Repo <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="project">
+                            <div class="proyect__group">
+                            	<div>
+                            		<p>Play Rock, Paper, Scissors against the computer.</p>
+                            		<p>Add points with every win.</p>
+                            		<p>You can keep the status of the score after refreshing the browser.</p>
+                            	</div>
+                                <div >
+                                    <img src="./src/rock.png" alt="img" loading="lazy">
+                                    <div class="links">
+                                        <a href="https://eghinner.github.io/rock-paper-scissors" target="_blank">
+                                            View Site <i class="fas fa-globe"></i>
+                                        </a>
+                                        <a href="https://github.com/Eghinner/rock-paper-scissors" target="_blank">
+                                            View Repo <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="thumbnails" class="thumbnails">
+            <li class="thumbnail">
+                <img src="./src/thumb-checklister.jpg" alt="img" loading="lazy"/>
+            </li>
+            <li class="thumbnail">
+                <img src="./src/thumb-store.jpg" alt="img" loading="lazy"/>
+            </li>
+            <li class="thumbnail">
+                <img src="./src/thumb-manager.jpg" alt="img" loading="lazy"/>
+            </li>
+            <li class="thumbnail">
+                <img src="./src/thumb-rock.jpg" alt="img" loading="lazy"/>
+            </li>
+        </ul>
+    </section>
+    <section id="skills" class="skills_section">
+        <header>Skills</header>
+        <div class="skills">
+            <div class="frontend">
+                <div class="title">Frontend</div>
+                <div class="skills_group">
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        <span class="skill_desc">HTML</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i>
+                        <span class="skill_desc">CSS</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js-square"></i>
+                        <span class="skill_desc">Javascript</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-react"></i>
+                        <span class="skill_desc">ReactJs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="backend">
+                <div class="title">Backend</div>
+                <div class="skills_group">
+                    <div class="skill">
+                        <i class="fab fa-php"></i>
+                        <span class="skill_desc">PHP</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-node"></i>
+                        <span class="skill_desc">NodeJs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="framework">
+                <div class="title">Web Framework</div>
+                <div class="skills_group">
+                    <div class="skill">
+                        <i class="fab fa-laravel"></i>
+                        <span class="skill_desc">Laravel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    	<header>Certifications</header>
+    	<div id="image-slider" class="splide">
+    	  <div class="splide__track">
+    			<ul class="splide__list">
+    				<li class="splide__slide cert">
+    					<a target="_blank" href="https://www.freecodecamp.org/certification/eghinner/responsive-web-design">
+    						<img src="./src/freecodecamp-responsive.png" alt="img" loading="lazy">
+    					</a>
+    				</li>
+    				<li class="splide__slide cert">
+    					<a target="_blank" href="https://www.freecodecamp.org/certification/eghinner/javascript-algorithms-and-data-structures">
+    						<img src="./src/freecodecamp-js.png" alt="img" loading="lazy">
+    					</a>
+    				</li>
+    				<li class="splide__slide cert">
+    					<a target="_blank" href="https://www.freecodecamp.org/certification/eghinner/front-end-development-libraries">
+    						<img src="./src/freecodecamp-frontdevlibrary.png" alt="img" loading="lazy">
+    					</a>
+    				</li>
+    				<li class="splide__slide cert">
+    					<a target="_blank" href="https://www.freecodecamp.org/certification/eghinner/back-end-development-and-apis">
+    						<img src="./src/freecodecamp-backend.png" alt="img" loading="lazy">
+    					</a>
+    				</li>
+    			</ul>
+    	  </div>
+    	</div>
+    </section>
+    <section id="contact" class="contact_section">
+        <header>Contact</header>
+        <div class="contact">
+            <form>
+                <input id="name" type="text" class="feedback-input" placeholder="Name">
+                <input id="email" type="text" class="feedback-input" placeholder="Email">
+                <textarea id="descript" class="feedback-input" placeholder="Message"></textarea>
+                <input type="submit" value="SEND">
+            </form>
+        </div>
+    </section>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost')
+        .split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
 
-		  			<div class="project">
-		  				<div class="proyect__group">
-		  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Necessitatibus vero ex velit. Impedit deleniti facere quas ad fuga quo eveniet vitae, error harum non culpa repellendus animi dolores et similique.</p>
-		  					<div style="flex-basis: 150%;">
-		  						<img src="./src/checklister.png" alt="">
-		  						<div class="links">
-		  							<a href="https://checklister8743.herokuapp.com" target="_blank">
-		  								View Site <i class="fas fa-globe"></i>
-		  							</a>
-		  							<a href="https://github.com/Eghinner/Checklister" target="_blank">
-		  								View Repo <i class="fab fa-github"></i>
-		  							</a>
-		  						</div>
-		  					</div>
-		  				</div>
-		  			</div>
-		  		</li>
-		  		<li class="splide__slide">
-		  			<div class="project">
-		  				<div class="proyect__group">
-		  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Necessitatibus vero ex velit. Impedit deleniti facere quas ad fuga quo eveniet vitae, error harum non culpa repellendus animi dolores et similique.</p>
-		  					<div style="flex-basis: 150%;">
-		  						<img src="src/Store.png" alt="">
-		  						<div class="links">
-		  							<a href="https://store-app4363.netlify.app" target="_blank">
-		  								View Site <i class="fas fa-globe"></i>
-		  							</a>
-		  							<a href="https://github.com/Eghinner/store-app" target="_blank">
-		  								View Repo <i class="fab fa-github"></i>
-		  							</a>
-		  						</div>
-		  					</div>
-		  				</div>
-		  			</div>
-		  		</li>
-		  		<li class="splide__slide">
-		  			<div class="project">
-		  				<div class="proyect__group">
-		  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Necessitatibus vero ex velit. Impedit deleniti facere quas ad fuga quo eveniet vitae, error harum non culpa repellendus animi dolores et similique.</p>
-		  					<div style="flex-basis: 150%;">
-		  						<img src="./src/manager.png" alt="">
-		  						<div class="links">
-		  							<a href="https://manager-proyectos.netlify.app/" target="_blank">
-		  								View Site <i class="fas fa-globe"></i>
-		  							</a>
-		  							<a href="https://github.com/Eghinner/manejo-de-proyectos" target="_blank">
-		  								View Repo <i class="fab fa-github"></i>
-		  							</a>
-		  						</div>
-		  					</div>
-		  				</div>
-		  			</div>
-		  		</li>
-		  	</ul>
-		  </div>
-		</div>
-
-		<ul id="thumbnails" class="thumbnails">
-		  <li class="thumbnail">
-		    <img src="./src/checklister.png" />
-		  </li>
-		  <li class="thumbnail">
-		    <img src="./src/checklister.png" />
-		  </li>
-		  <li class="thumbnail">
-		    <img src="./src/checklister.png" />
-		  </li>
-		  <li class="thumbnail">
-		    <img src="./src/checklister.png" />
-		  </li>
-		  <li class="thumbnail">
-		    <img src="./src/checklister.png" />
-		  </li>
-		</ul>
-	</section>
-
-		<section id="skills" class="skills_section">
-			<header>Skills</header>
-			<div class="skills">
-				<div class="frontend">
-					<div class="title">Frontend</div>
-					<div class="skills_group">
-						<div class="skill">
-							<i class="fab fa-html5"></i>
-							<span class="skill_desc">HTML</span>
-						</div>
-						<div class="skill">
-							<i class="fab fa-css3-alt"></i>
-							<span class="skill_desc">CSS</span>
-						</div>
-						<div class="skill">
-							<i class="fab fa-js-square"></i>
-							<span class="skill_desc">Javascript</span>
-						</div>
-						<div class="skill">
-							<i class="fab fa-react"></i>
-							<span class="skill_desc">ReactJs</span>
-						</div>
-					</div>
-				</div>
-				<div class="backend">
-					<div class="title">Backend</div>
-					<div class="skills_group">
-						<div class="skill">
-							<i class="fab fa-php"></i>
-							<span class="skill_desc">PHP</span>
-						</div>
-						<div class="skill">
-							<i class="fab fa-node"></i>
-							<span class="skill_desc">NodeJs</span>
-						</div>
-					</div>
-				</div>
-				<div class="framework">
-					<div class="title">Web Framework</div>
-					<div class="skills_group">
-						<div class="skill">
-							<i class="fab fa-laravel"></i>
-							<span class="skill_desc">Laravel</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="contact" class="contact_section">
-			<header>Contact</header>
-			<div class="contact">
-				<form>
-					<input id="name" type="text" class="feedback-input" placeholder="Name">
-					<input id="email" type="text" class="feedback-input" placeholder="Email">
-					<textarea id="descript" class="feedback-input" placeholder="Message"></textarea>
-					<input type="submit" value="SEND">
-				</form>
-			</div>
-		</section>
-		<script>
-		document.write('<script src="http://' + (location.host || 'localhost')
-			.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-		</script>
-	</body>
-
-	</html>
+</html>

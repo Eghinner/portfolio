@@ -10,8 +10,6 @@
 		margin: 0 .5rem;
 	}
 	.networks {
-		background: rgba(0,0,0,.5) !important;
-		color: #fff !important;
 		width: auto !important;
 	}
 	.networks a svg {
@@ -20,7 +18,6 @@
 
 }
 #about_me {
-	width: 90%;
 	margin: 2rem auto;
 	display: flex;
 	flex-direction: column;
@@ -29,16 +26,17 @@
 }
 
 .me {
+	width: 90%;
+	margin: 0 auto;
 	font-size: 2rem;
 }
 
 .networks {
-	background-color: lightgrey;
+	background-color: rgba(0,0,0,.5);
+	color: #fff;
 	justify-self: start;
 	padding: 1rem;
 	width: 30%;
-	color: #000;
-	/*display: inline-block;*/
 	margin: 2rem auto;
 	text-align: center;
 	border-radius: 20px;
@@ -62,5 +60,5 @@
 	color: #07299F;
 }
 .facebook {
-	color: lightblue;
+	color: blue;
 }
