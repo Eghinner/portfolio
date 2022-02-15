@@ -1,3 +1,5 @@
+// import TOKEN from './config.js'
+
 const
     form = document.querySelector('form'),
     input_name = document.querySelector('#name'),
@@ -23,7 +25,7 @@ function checkInputs() {
         return;
     } else {
         Email.send({
-            SecureToken: config.MY_TOKEN,
+            SecureToken: TOKEN,
             From: 'eghinner@gmail.com',
             To: 'ensohernandez63@gmail.com',
             Subject: 'Alerta que camina!',
