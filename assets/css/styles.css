@@ -72,6 +72,11 @@ nav {
 	z-index: 999999;
 }
 
+.brand {
+	object-fit: contain;
+	height: 65px;
+}
+
 h1 {
 	font-family: 'Bebas Neue', cursive;
 	letter-spacing: 3px;

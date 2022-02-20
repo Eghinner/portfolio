@@ -17,10 +17,21 @@
 	justify-content: space-around;
 }
 
+.proyect__group .group__description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
 .proyect__group p {
 	font-size: 1.9rem;
 	margin: 1rem;
 	max-width: 620px;
+}
+
+.group__description svg {
+	height: 70px;
+	margin: 0 1rem;
 }
 
 .project img {
@@ -102,7 +113,9 @@
 .thumbnail.is-active {
   opacity: 1;
 }
-
+.splide__arrow {
+	height: 3rem !important;width: 3rem !important;
+}
 
 
 @media (max-width: 900px) {
