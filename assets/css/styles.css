@@ -75,6 +75,7 @@ nav {
 .brand {
 	object-fit: contain;
 	height: 65px;
+	margin: auto 0;
 }
 
 h1 {

@@ -29,9 +29,8 @@
 	flex-basis: 40%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	height: 400px;
-	animation: oval-shift 10s ease-in-out infinite alternate;
-	background-image: linear-gradient(to left bottom, #F7444E, #D73E7C, #A24C94, #675493, #3A527A);
 }
 
 .mold__inner {
@@ -40,7 +39,7 @@
 	height: 350px;
 	width: 350px;
 	animation: oval-shift 10s ease-in-out infinite alternate-reverse;
-	background-image: linear-gradient(to right top, #051937, #1c5065, #5a8989, #a9c3b1, #fdfee8);
+	background-image: linear-gradient(to left bottom, #F7444E, #D73E7C, #A24C94, #675493, #3A527A);
 }
 .mold__inner img {
 	object-fit: contain;
